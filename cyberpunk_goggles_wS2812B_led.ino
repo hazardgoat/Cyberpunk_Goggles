@@ -22,8 +22,6 @@ bool instant = false;
  2) LEDs are orange color.
  3) LEDs fade up to max brightness then back off to a lower brightness.
  4) LEDs then slow fade orange to red-orange and back in a loop.
- 5) Optional photocell influence brightness during fade loop so that LEDs get 
-    brighter in the dark and dimmer in bright light.
 */
     
 void setup()
