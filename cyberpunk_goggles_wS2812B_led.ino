@@ -84,7 +84,7 @@ void TerminatorEyes()
 {
   if (flop_switch == true && instant == false)
   {
-   for(int i = 0; i < NUM_LEDS; i++) {
+    for(int i = 0; i < NUM_LEDS; i++) {
        // can also be CRGB(0, 0, 0); instead of :Black
        leds[i] = CRGB::Black;
        }
