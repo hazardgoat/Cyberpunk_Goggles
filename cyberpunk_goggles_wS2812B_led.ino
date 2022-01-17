@@ -47,15 +47,10 @@ void killSwitch()
   switch (instant)
   {
     case true:
-    leds[0] = CRGB::Black;
-    leds[1] = CRGB::Black;
-    leds[2] = CRGB::Black;
-    leds[3] = CRGB::Black;
-    leds[4] = CRGB::Black;
-    leds[5] = CRGB::Black;
-    leds[6] = CRGB::Black;
-    leds[7] = CRGB::Black;
-    // can also be CRGB(0, 0, 0); instead of :Black
+    for(int i = 0; i < NUM_LEDS; i++) {
+       // can also be CRGB(0, 0, 0); instead of :Black
+       leds[i] = CRGB::Black;
+       }
     FastLED.show();
     instant = false;
     flop_switch = false;
@@ -89,14 +84,11 @@ void TerminatorEyes()
 {
   if (flop_switch == true && instant == false)
   {
-    leds[0] = CRGB::Black;
-    leds[1] = CRGB::Black;
-    leds[2] = CRGB::Black;
-    leds[3] = CRGB::Black;
-    leds[4] = CRGB::Black;
-    leds[5] = CRGB::Black;
-    leds[6] = CRGB::Black;
-    leds[7] = CRGB::Black;
+   for(int i = 0; i < NUM_LEDS; i++) {
+       // can also be CRGB(0, 0, 0); instead of :Black
+       leds[i] = CRGB::Black;
+       }
+   
     int redValue = leds[0].r = leds[1].r = leds[2].r = leds[3].r = leds[4].r = leds[5].r = leds[6].r = leds[7].r;
     int greenValue = leds[0].g = leds[1].g = leds[2].g = leds[3].g = leds[4].g = leds[5].g = leds[6].g = leds[7].g;
   
@@ -153,30 +145,13 @@ void fadeLoop()
   if (fadeLoop_gate == true)
   { 
     flop_switch = false;
-    leds[0].r = 120;
-    leds[0].g = 17;
-    leds[0].b = 0;
-    leds[1].r = 120;
-    leds[1].g = 17;
-    leds[1].b = 0;
-    leds[2].r = 120;
-    leds[2].g = 17;
-    leds[2].b = 0;
-    leds[3].r = 120;
-    leds[3].g = 17;
-    leds[3].b = 0;
-    leds[4].r = 120;
-    leds[4].g = 17;
-    leds[4].b = 0;
-    leds[5].r = 120;
-    leds[5].g = 17;
-    leds[5].b = 0;
-    leds[6].r = 120;
-    leds[6].g = 17;
-    leds[6].b = 0;
-    leds[7].r = 120;
-    leds[7].g = 17;
-    leds[7].b = 0;
+    for(int i = 0; i < NUM_LEDS; i++) {
+       // can also be CRGB(0, 0, 0); instead of :Black
+       leds[i].r = 120;
+       leds[i].g = 17;
+       leds[i].b = 0;
+       }
+   
     int redValue = leds[0].r = leds[1].r = leds[2].r = leds[3].r = leds[4].r = leds[5].r = leds[6].r = leds[7].r;
     int greenValue = leds[0].g = leds[1].g = leds[2].g = leds[3].g = leds[4].g = leds[5].g = leds[6].g = leds[7].g;
     FastLED.show();      
